@@ -12,7 +12,7 @@
     </header>
     <main>
         <script>
-            function myFunction(mySong)
+            function Select_Song(mySong)
             {   
                 switch(mySong)
                 {
@@ -28,6 +28,11 @@
                   document.body.style.backgroundColor= "blue";
                 }
             }
+            function Lock_In_Answer()
+            {   
+                url = "https://scryfall.com/"
+                popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+            }
         </script>
         <div class="song1">
             <iframe id="song1box" style="border:12px black" src="https://open.spotify.com/embed/track/0KhKVGSHBhUs8hIexyvwj4" width="70%"
@@ -35,33 +40,19 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <label>
-            <input type="radio" name="myRadioGroup" value="option1" onclick="myFunction(this.value);"> Option 1
+            <input type="radio" name="myRadioGroup" value="option1" onclick="Select_Song(this.value);"> Option 1
         </label>
         <div class="song2">
             <iframe id="song2box" style="border:12px black" src="https://open.spotify.com/embed/track/7vfaRUaFBDwENwa3tzJY64" width="70%"
             height="352" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <!-- button type="button" onclick="myFunction()">Change Color</button -->
         </div>
         <label>
-            <input type="radio" name="myRadioGroup" value="option2" onclick="myFunction(this.value);"> Option 2
+            <input type="radio" name="myRadioGroup" value="option2" onclick="Select_Song(this.value);"> Option 2
         </label>
-       <!-- div class="content" -->
-            <div class="game">
-            <div class="word-display">
-                <!-- Display the partially guessed word here -->
-                <span>_ _ _ _ _</span>
-            </div>
-            <div class="attempts">
-                <span>Attempts Left: 6</span>
-            </div>
-            <div class="guess-input">
-                <input type="text" placeholder="Enter your guess" />
-                <button>Guess</button>
-            </div>
-        </div>
-        <!-- /div -->
-        
+        <label>
+            <button type="button" onclick="Lock_In_Answer()">Lock In Answer</button>
+        </label>        
     </main>
     <footer>
         <p>&copy; 2023 Our Dope Game</p>
