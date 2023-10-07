@@ -24,6 +24,7 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <label for="myRadioGroup">No, this song is better:</label>
             <input type="radio" name="myRadioGroup" value="option2"> Option 2
+            <button type="button" onclick="myFunction()">Change Color</button>
         </div>
        <!-- div class="content" -->
             <div class="game">
@@ -40,6 +41,12 @@
             </div>
         </div>
         <!-- /div -->
+        <script>
+            function myFunction()
+            {   
+            document.body.style.backgroundColor= "green";
+            }
+        </script>
     </main>
     <footer>
         <p>&copy; 2023 Our Dope Game</p>
