@@ -44,8 +44,15 @@
         <script>
             function myFunction()
             {   
-            document.body.style.backgroundColor= "green";
-            }
+                switch(myRadioGroup)
+                {
+                case option1:
+                  document.body.style.backgroundColor= "green";
+                  break;
+                case option2:
+                  document.body.style.backgroundColor= "blue";
+                  break;
+                }
         </script>
     </main>
     <footer>
