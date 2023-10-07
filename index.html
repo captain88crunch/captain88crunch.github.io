@@ -35,7 +35,7 @@
                 var ele = document.getElementsByName("myRadioGroup");
                 for (i = 0; i < ele.length; i++) {
                     if (ele[i].checked)
-                        result = "Song: " + ele[i].value;
+                        result = ele[i].value;
                 }
                 Set_Cookie("SongChoice",result,30);
                 /*alert("Your selection is " + document.getElementByName("myRadioGroup").value);
