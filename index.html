@@ -40,7 +40,7 @@
 
                 let cname = "SongChoice"
                 const d = new Date();
-                cname = cname + string(d.getDate)
+                cname = cname + d.getDate();
                 alert(cname)
                 Set_Cookie(cname,result,30);
                 url = "https://scryfall.com/"
@@ -74,7 +74,7 @@
             function Check_Cookie() {
               let cname = "SongChoice"
                 const d = new Date();
-                cname = cname + string(d.getDate)
+                cname = cname + d.getDate();
               let songChoice = Get_Cookie(cname);
               if (songChoice != "") {
                 alert("Welcome back. Earlier you song choice was: " + songChoice);
