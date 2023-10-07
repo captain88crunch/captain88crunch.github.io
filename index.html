@@ -30,13 +30,14 @@
             }
             function Lock_In_Answer()
             {   
-                
+
+                var result = "yolo";
                 var ele = document.getElementsByName("myRadioGroup");
                 for (i = 0; i < ele.length; i++) {
                     if (ele[i].checked)
-                        document.getElementById("result").innerHTML
-                            = "Song: " + ele[i].value;
+                        result = "Song: " + ele[i].value;
                 }
+                Set_Cookie("SongChoice",result,30);
                 /*alert("Your selection is " + document.getElementByName("myRadioGroup").value);
                 
                 url = "https://scryfall.com/"
@@ -47,7 +48,7 @@
               const d = new Date();
               d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
               let expires = "expires="+d.toUTCString();
-              document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+              document.cookie = cname + "=" + cvalue + ";" + expires + ";/*path=/";*/
             }
             
             function Get_Cookie(cname) {
@@ -66,14 +67,14 @@
             }
             
             function Check_Cookie() {
-              let user = Get_Cookie("username");
+              let user = Get_Cookie("SongChoice");
               if (user != "") {
-                alert("Welcome again " + user);
+                alert("Welcome back. Earlier you song choice was: " + user);
               } else {
-                user = prompt("Please enter your name:", "");
-                if (user != "" && user != null) {
+                alert("Choose a song already!!");
+                /*if (user != "" && user != null) {
                   Set_Cookie("username", user, 365);
-                }
+                }*/
               }
             }
         </script>
