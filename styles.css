@@ -60,13 +60,13 @@ main {
 }
 
 /* Style for the content element when the first radio button is checked */
-input[type="radio"][name="myRadioGroup"][value="option1"]:checked + .content {
+input[type="radio"][name="myRadioGroup"][value="option1"]:checked + .game {
     background-color: #FF0000; /* Change the background color here */
     color: #FFFFFF; /* Change the text color here if needed */
 }
 
 /* Style for the content element when the second radio button is checked */
-input[type="radio"][name="myRadioGroup"][value="option2"]:checked + .content {
+input[type="radio"][name="myRadioGroup"][value="option2"]:checked + .game {
     background-color: #00FF00; /* Change the background color here */
     color: #000000; /* Change the text color here if needed */
 }
