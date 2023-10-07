@@ -17,11 +17,12 @@
                 switch(mySong)
                 {
                 case "option1":
-                  document.getElementById("song1box").style="border:10px solid red";
-                    document.body.style.backgroundColor= "yellow";
+                  document.getElementById("song1box").style="border:3px solid red";
+                  document.getElementById("song2box").style="border:3px solid black";  
                   break
                 case "option2":
-                  document.body.style.backgroundColor= "green";
+                  document.getElementById("song2box").style="border:3px solid red";
+                  document.getElementById("song1box").style="border:3px solid black";
                   break
                 default:
                   document.body.style.backgroundColor= "blue";
@@ -37,7 +38,7 @@
             <input type="radio" name="myRadioGroup" value="option1" onclick="myFunction(this.value);"> Option 1
         </label>
         <div class="song2">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7vfaRUaFBDwENwa3tzJY64" width="70%"
+            <iframe id="song2box" style="border:12px black" src="https://open.spotify.com/embed/track/7vfaRUaFBDwENwa3tzJY64" width="70%"
             height="352" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <!-- button type="button" onclick="myFunction()">Change Color</button -->
