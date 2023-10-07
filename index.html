@@ -8,7 +8,7 @@
 </head>
 <body onload="Check_Cookie()">
     <header>
-        <h1>Drop Da Duece</h1>
+        <h1>Drop Da Duece1</h1>
     </header>
     <main>
         <script>
@@ -31,8 +31,13 @@
             function Lock_In_Answer()
             {   
                 
-                
-                alert("Your selection is " + document.getElementByName("myRadioGroup").value);
+                var ele = document.getElementsByName("myRadioGroup");
+                for (i = 0; i < ele.length; i++) {
+                    if (ele[i].checked)
+                        document.getElementById("result").innerHTML
+                            = "Song: " + ele[i].value;
+                }
+                <!--alert("Your selection is " + document.getElementByName("myRadioGroup").value);-->
                 
                 url = "https://scryfall.com/"
                 popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
@@ -92,7 +97,8 @@
             <label>
                 <button type="button" onclick="Lock_In_Answer()">Lock In Answer</button>
             </label>  
-        </div>     
+        </div>
+        <div id="result"></div>
     </main>
     <footer>
         <p>&copy; 2023 Our Dope Game</p>
