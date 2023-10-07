@@ -18,25 +18,31 @@
                 {
                 case "option1":
                   document.body.style.backgroundColor= "green";
-                  break;
+                  break
                 case "option2":
                   document.body.style.backgroundColor= "blue";
-                  break;
+                  break
+                default:
+                  document.body.style.backgroundColor= "blue";
+                  break
                 }
+            }
         </script>
         <div class="song1">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0KhKVGSHBhUs8hIexyvwj4" width="70%"
             height="200" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <label for="myRadioGroup">This song is better:</label>
+            <label>
             <input type="radio" name="myRadioGroup" value="option1" onclick="myFunction(this.value);"> Option 1
+                </label>
         </div>
         <div class="song2">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7vfaRUaFBDwENwa3tzJY64" width="70%"
             height="352" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <label for="myRadioGroup">No, this song is better:</label>
+            <label>
             <input type="radio" name="myRadioGroup" value="option2" onclick="myFunction(this.value);"> Option 2
+            </label>
             <!-- button type="button" onclick="myFunction()">Change Color</button -->
         </div>
        <!-- div class="content" -->
