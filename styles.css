@@ -25,6 +25,22 @@ main {
     padding: 20px;
 }*/
 
+.sg-replace-icons input[type=radio] + label:before,
+.sg-replace-icons input[type=radio] + label span.sg-icon-target:before
+{
+/* unselected radio */
+/* content: "\f10c"; - Default icon */
+ content: "\2661";
+}
+.sg-replace-icons input[type=radio]:checked + label:before,
+.sg-replace-icons input[type=radio]:checked + label span.sg-icon-target:before
+{
+/* selected radio */
+/* content: "\f192"; - Default icon */
+ content: "\2665";
+ color: #F06586;
+}
+
 /* Style the game container */
 .game {
     max-width: 400px;
